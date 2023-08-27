@@ -11,10 +11,11 @@ import AboutMe from "./pages/AboutMe";
 function App() {
   return (
     <div className="App">
+     <BrowserRouter basename="/pff">
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/pff" element={<Home />} />
+          <Route exact path="/pff" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<ProjectDisplay />} />
           <Route path="/education" element={<Experience />} />
@@ -22,6 +23,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
+   </BrowserRouter>
     </div>
   );
 }
